@@ -64,7 +64,6 @@ roleRef:
   apiGroup: rbac.authorization.k8s.io
 EOF
 
-# Привязка view-only к viewer-user
 kubectl apply -f - <<EOF
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
@@ -79,5 +78,3 @@ roleRef:
   name: view-only
   apiGroup: rbac.authorization.k8s.io
 EOF
-
-echo "Роли привязаны к пользователям."
